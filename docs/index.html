@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Discoscene Project Page">
+  <meta name="keywords" content="DiscoScene, Generative NeRF, Scene Synthesis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DiscoScene: Spatially Disentangled Generative Radiance Field for Controllable 3D-aware Scene Synthesis</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://justimyhxu.github.io">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://genforce.github.io/volumegan/">
+              VolumeGAN
+            </a>
+            <a class="navbar-item" href="https://vivianszf.github.io/geod/">
+              GeoD
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="publication-title"><b>DiscoScene</b>: Spatially Disentangled Generative Radiance Field for
+              Controllable
+              3D-aware Scene Synthesis</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://justimyhxu.github.io/">Yinghao Xu</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://mlchai.com/">Menglei Chai</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://vivianszf.github.io/">Zifan Shi</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://pengsida.net/">Sida Peng</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://universome.github.io/">Ivan Skorokhodov</a><sup>5,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://aliaksandrsiarohin.github.io/aliaksandr-siarohin-website/">Aliaksandr
+                  Siarohin</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://ceyuan.me/">Ceyuan Yang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://shenyujun.github.io/">Yujun Shen</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://hsinyinglee.com/">Hsin-Ying Lee</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://boleizhou.github.io/">Bolei Zhou</a><sup>6</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://www.stulyakov.com/">Sergey Tulyakov</a><sup>2</sup>
+              </span>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>CUHK &nbsp&nbsp</span>
+              <span class="author-block"><sup>2</sup>Snap Inc. &nbsp&nbsp</span>
+              <span class="author-block"><sup>3</sup>HKUST &nbsp&nbsp</span>
+              <span class="author-block"><sup>4</sup>ZJU &nbsp&nbsp</span>
+              <span class="author-block"><sup>5</sup>KAUST &nbsp&nbsp</span>
+              <span class="author-block"><sup>6</sup>UCLA </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=Fvenkw7yeok"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/justimyhxu/discoscene"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="./#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-quote-left"></i>
+                    </span>
+                    <span>Cite</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline controls height="100%">
+          <source src="./contents/c_results/teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <b>DiscoScene</b> performs controllable scene synthesis on various datasets.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/Fvenkw7yeok" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!--/ Paper video. -->
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We present DisCoScene: a 3D-aware generative model for high-quality and controllable
+              scene synthesis.
+            </p>
+            <p>
+              The key ingredient of our approach is a very abstract object-level representation (3D bounding boxes
+              without semantic annotation) as the scene layout prior,
+              which is simple to obtain, general to describe various scene contents, and yet informative to disentangle
+              objects and background.
+              Moreover, it serves as an intuitive user control for scene editing.
+            </p>
+
+            <div class="teaser">
+              <img src="./contents/framework.jpg">
+            </div>
+
+            <p>
+              Based on such a prior, our model spatially disentangles the whole scene into object-centric generative
+              radiance fields by learning on only 2D images with the global-local discrimination.
+              Our model obtains the generation fidelity and editing flexibility of individual objects while being able
+              to efficiently compose objects and the background into a complete scene.
+              We demonstrate state-of-the-art performance on many scene datasets, including the challenging Waymo
+              outdoor dataset.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+  <!-- <section class="Section">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+            <source src="./contents/c_results/clevr-arrange.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+  <section class="section">
+    <!-- <div class="hero-body"> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-4">Global Camera Control</h2>
+        <div class="container" width=1000px>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay muted loop playsinline controls width="100%" height="100%">
+                <source src="./contents/c_results/clevr-camera.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/3dfront-camera.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Object Arrangement</h2>
+        <div class="container" width=1000px>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/waymo-arrange.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/clevr-arrange.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/3dfront-arrange.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Object Removal/Insertion</h2>
+        <div class="container" width=1000px>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/3dfront-rm-ins.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/waymo-rm-ins.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/clevr-rm-ins.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Object Restyling</h2>
+        <div class="container" width=1000px>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/clevr-restyling.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/3dfront-restyling.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-clevr">
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="100%" height="100%">
+                <source src="./contents/c_results/waymo-restyling.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Real Scene Editing</h2>
+
+        <div class="inversion">
+          <video id="inversion" autoplay muted loop playsinline controls margin="0px auto">
+            <source src="./contents/c_results/inversion.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <div class="cit_cont">
+        <pre class="cit">@article{xu2022discoscene,
+    author  = {Xu, Yinghao and Chai, Menglei and Shi, Zifan and Peng, Sida and Skorokhodov Ivan and Siarohin Aliaksandr and Yang, Ceyuan and Shen, Yujun and Lee, Hsin-Ying and Zhou, Bolei and Tulyakov Sergy},
+    title   = {DiscoScene: Spatially Disentangled Generative Radiance Field for Controllable 3D-aware Scene Synthesis},
+    journal = {arxiv:},
+    year    = {2022},
+}</pre>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Acknowledgements</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+
+          <div class="content has-text-justified">
+            <p>
+              We thank Jiatao Gu, Willi Menapace, Jian Ren, Panos Achlioptas, Tai Wang, and Zian Wang for fruitful
+              discussions and comments about this work.
+            </p>
+            <p>
+              The website template was adapted from <a href="https://nerfies.github.io/">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
