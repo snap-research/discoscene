@@ -7,8 +7,8 @@
 > **DiscoScene: Spatially Disentangled Generative Radiance Field for Controllable 3D-aware Scene Synthesis** <br>
 > Yinghao Xu, Menglei Chai, Zifan Shi, Sida Peng, Ivan Skorokhodov, Aliaksandr Siarohin, Ceyuan Yang, Yujun Shen, Hsin-Ying Lee, Bolei Zhou, Sergey Tulyakov <br>
 
-[[Paper]()]
-[[Project Page](https://justimyhxu.github.io/discoscene)]
+[[Paper](https://arxiv.org/abs/2212.11984)]
+[[Project Page](https://snap-research.github.io/discoscene)]
 [[Demo](https://www.youtube.com/watch?v=Fvenkw7yeok)]
 
 This work presents DisCoScene: a 3D-aware generative model for high-quality and controllable scene synthesis.
@@ -35,7 +35,7 @@ Real image inversion and editing.
 @article{xu2022discoscene,
      author    = {Xu, Yinghao and Chai, Menglei and Shi, Zifan and Peng, Sida and Skorokhodov Ivan and Siarohin Aliaksandr and Yang, Ceyuan and Shen, Yujun and Lee, Hsin-Ying and Zhou, Bolei and Tulyakov Sergy},
      title     = {DiscoScene: Spatially Disentangled Generative Radiance Field for Controllable 3D-aware Scene Synthesis},
-     journal   = {arxiv:},
+     journal   = {arxiv: 2212.11984},
      year      = {2022},
     }
 ```
