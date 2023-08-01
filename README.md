@@ -41,7 +41,7 @@ Download pretrained model with the [script](./download_models.sh)
 ```
 bash download_models.sh
 ```
-Users can use the following command to generate demo videes
+Users can use the following command to generate demo videos
 ```shell
 python render.py \
     --work_dir ${WORK_DIR} \
@@ -52,7 +52,7 @@ python render.py \
     --render_type ${RENDER_TYPE} \
     --generate_html ${SAVE_HTML} \
     --dataset_type ${DATASET} \
-    --ssaa ${ANTIALIASING} \
+    --ssaa ${SSAA} \
     discoscene \
     --val_anno_path ${VAL_ANN}\
     --val_data_file_format dir \
